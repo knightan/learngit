@@ -71,5 +71,25 @@ Created on Wed Mar 28 18:05:37 2018
 #
 #L = list(filter(is_odd, range(1, 20)))
 
-L = list(filter(lambda x: x % 2 == 1, range(1, 20)))
-print(L)
+#L = list(filter(lambda x: x % 2 == 1, range(1, 20)))
+#print(L)
+
+#decorator
+#
+#def log(func):
+#    def wrapper(*args, **kw):
+#        print('call %s():' % func.__name__)
+#        return func(*args, **kw)
+#    return wrapper
+#
+#@log
+#def now():
+#    print('2015-3-25')
+#print(now.__name__)
+
+#partial function
+
+
+import functools
+int2 = functools.partial(int, base=2)
+print(int2('1000000'))

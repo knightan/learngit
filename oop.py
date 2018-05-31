@@ -68,17 +68,41 @@ class Cat(Animal):
 
     def run(self):
         print('Cat is running...')
+
+class Husky(Dog):
+    def run(self):
+        print('Husky is running')
         
 def run_twice(animal):
     animal.run()
     animal.run()
         
 dog = Dog()
+husky = Husky()
 cat = Cat()
 
 
-cat.run()
-dog.run()
-dog.eat()
-print(isinstance(dog,Cat))
-run_twice(Dog())
+#cat.run()
+#dog.run()
+#dog.eat()
+#print(isinstance(dog,Cat))
+#run_twice(Dog())
+
+#获取对象信息
+#print(type(dog)==Dog)
+#print(isinstance(husky, Husky))
+#print(isinstance(husky, Dog))
+#print(isinstance(husky, Animal))
+#print(dir('ABC'))
+#print('ABCd'.__len__())
+
+class MyObject(object):
+    def __init__(self):
+        self.x = 9
+    def power(self):
+        return self.x * self.x
+
+obj = MyObject()
+print(hasattr(obj,'y'))
+print(setattr(obj,'y',19))
+print(getattr(obj,'y',404))
